@@ -43,6 +43,30 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/group_12_motion_planning/ur5e_moveit_controller" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/group_12_motion_planning/ur5e_moveit_controller")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/group_12_motion_planning/ur5e_moveit_controller"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/group_12_motion_planning" TYPE EXECUTABLE FILES "/home/UMRobotics/group12_ws/build/group_12_motion_planning/ur5e_moveit_controller")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/group_12_motion_planning/ur5e_moveit_controller" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/group_12_motion_planning/ur5e_moveit_controller")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/group_12_motion_planning/ur5e_moveit_controller"
+         OLD_RPATH "/home/UMRobotics/moveit_ws/install/moveit_msgs/lib:/home/UMRobotics/moveit_ws/install/moveit_core/lib:/opt/ros/jazzy/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/home/UMRobotics/moveit_ws/install/moveit_ros_occupancy_map_monitor/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/group_12_motion_planning/ur5e_moveit_controller")
+    endif()
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/home/UMRobotics/group12_ws/build/group_12_motion_planning/CMakeFiles/ur5e_moveit_controller.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/UMRobotics/group12_ws/build/group_12_motion_planning/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/group_12_motion_planning")
 endif()
 

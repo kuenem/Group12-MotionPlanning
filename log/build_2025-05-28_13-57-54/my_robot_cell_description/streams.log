@@ -1,0 +1,68 @@
+[0.010s] Invoking command in '/home/UMRobotics/group12_ws/build/my_robot_cell_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/UMRobotics/group12_ws/src/my_robot_cell_description -DCMAKE_INSTALL_PREFIX=/home/UMRobotics/group12_ws/install/my_robot_cell_description
+[0.047s] -- The C compiler identification is GNU 13.3.0
+[0.084s] -- The CXX compiler identification is GNU 13.3.0
+[0.095s] -- Detecting C compiler ABI info
+[0.158s] -- Detecting C compiler ABI info - done
+[0.164s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.164s] -- Detecting C compile features
+[0.164s] -- Detecting C compile features - done
+[0.171s] -- Detecting CXX compiler ABI info
+[0.241s] -- Detecting CXX compiler ABI info - done
+[0.247s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.247s] -- Detecting CXX compile features
+[0.248s] -- Detecting CXX compile features - done
+[0.252s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.378s] -- Found Python3: /home/UMRobotics/.local/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.478s] -- Found xacro: 2.0.13 (/opt/ros/jazzy/share/xacro/cmake)
+[0.481s] -- Found controller_manager_msgs: 4.29.0 (/opt/ros/jazzy/share/controller_manager_msgs/cmake)
+[0.526s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.541s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.559s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.579s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.661s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.705s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.709s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.779s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.795s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.812s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.870s] -- Found moveit_core: 2.11.0 (/home/UMRobotics/moveit_ws/install/moveit_core/share/moveit_core/cmake)
+[0.980s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.049s] -- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[1.064s] -- Found rclcpp_lifecycle: 28.1.9 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.079s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[1.184s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.184s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.463s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.545s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.546s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.547s] -- Added test 'lint_cmake' to check CMake code style
+[1.547s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.549s] -- Added test 'xmllint' to check XML markup files
+[1.551s] -- Configuring done (1.5s)
+[1.555s] -- Generating done (0.0s)
+[1.557s] -- Build files have been written to: /home/UMRobotics/group12_ws/build/my_robot_cell_description
+[1.565s] Invoked command in '/home/UMRobotics/group12_ws/build/my_robot_cell_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/UMRobotics/group12_ws/src/my_robot_cell_description -DCMAKE_INSTALL_PREFIX=/home/UMRobotics/group12_ws/install/my_robot_cell_description
+[1.566s] Invoking command in '/home/UMRobotics/group12_ws/build/my_robot_cell_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/UMRobotics/group12_ws/build/my_robot_cell_description -- -j16 -l16
+[1.597s] Invoked command in '/home/UMRobotics/group12_ws/build/my_robot_cell_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/UMRobotics/group12_ws/build/my_robot_cell_description -- -j16 -l16
+[1.598s] Invoking command in '/home/UMRobotics/group12_ws/build/my_robot_cell_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/UMRobotics/group12_ws/build/my_robot_cell_description
+[1.603s] -- Install configuration: ""
+[1.603s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/ament_index/resource_index/package_run_dependencies/my_robot_cell_description
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/ament_index/resource_index/parent_prefix_path/my_robot_cell_description
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/environment/ament_prefix_path.sh
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/environment/ament_prefix_path.dsv
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/environment/path.sh
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/environment/path.dsv
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/local_setup.bash
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/local_setup.sh
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/local_setup.zsh
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/local_setup.dsv
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/package.dsv
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/ament_index/resource_index/packages/my_robot_cell_description
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/cmake/my_robot_cell_descriptionConfig.cmake
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/cmake/my_robot_cell_descriptionConfig-version.cmake
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/package.xml
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/launch
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/launch/view_robot.launch.py
+[1.604s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/srdf
+[1.605s] -- Installing: /home/UMRobotics/group12_ws/install/my_robot_cell_description/share/my_robot_cell_description/srdf/ur.srdf.xacro
+[1.606s] Invoked command in '/home/UMRobotics/group12_ws/build/my_robot_cell_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/UMRobotics/group12_ws/build/my_robot_cell_description

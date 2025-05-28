@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/UMRobotics/group12_ws/build/group_12_motion_planning
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/ur5e_moveit_controller.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +73,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/group_12_motion_planning_uninstall.dir/clean
+clean: CMakeFiles/ur5e_moveit_controller.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -126,6 +127,32 @@ group_12_motion_planning_uninstall: CMakeFiles/group_12_motion_planning_uninstal
 CMakeFiles/group_12_motion_planning_uninstall.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/group_12_motion_planning_uninstall.dir/build.make CMakeFiles/group_12_motion_planning_uninstall.dir/clean
 .PHONY : CMakeFiles/group_12_motion_planning_uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ur5e_moveit_controller.dir
+
+# All Build rule for target.
+CMakeFiles/ur5e_moveit_controller.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur5e_moveit_controller.dir/build.make CMakeFiles/ur5e_moveit_controller.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur5e_moveit_controller.dir/build.make CMakeFiles/ur5e_moveit_controller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/UMRobotics/group12_ws/build/group_12_motion_planning/CMakeFiles --progress-num=1,2 "Built target ur5e_moveit_controller"
+.PHONY : CMakeFiles/ur5e_moveit_controller.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ur5e_moveit_controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/UMRobotics/group12_ws/build/group_12_motion_planning/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ur5e_moveit_controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/UMRobotics/group12_ws/build/group_12_motion_planning/CMakeFiles 0
+.PHONY : CMakeFiles/ur5e_moveit_controller.dir/rule
+
+# Convenience name for target.
+ur5e_moveit_controller: CMakeFiles/ur5e_moveit_controller.dir/rule
+.PHONY : ur5e_moveit_controller
+
+# clean rule for target.
+CMakeFiles/ur5e_moveit_controller.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ur5e_moveit_controller.dir/build.make CMakeFiles/ur5e_moveit_controller.dir/clean
+.PHONY : CMakeFiles/ur5e_moveit_controller.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

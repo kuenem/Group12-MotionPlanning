@@ -1,6 +1,6 @@
 #include <memory>
 #include <rclcpp/rclcpp.hpp>
-#include <moveit/move_group_interface/move_group_interface.hpp>
+#include <moveit/move_group_interface/move_group_interface.h>
 #include <geometry_msgs/msg/pose.hpp>
 
 int main(int argc, char *argv[])

@@ -1,0 +1,61 @@
+[0.010s] Invoking command in '/home/UMRobotics/group12_ws/build/predefined_motion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/UMRobotics/group12_ws/src/predefined_motion -DCMAKE_INSTALL_PREFIX=/home/UMRobotics/group12_ws/install/predefined_motion
+[0.046s] -- The C compiler identification is GNU 13.3.0
+[0.081s] -- The CXX compiler identification is GNU 13.3.0
+[0.091s] -- Detecting C compiler ABI info
+[0.154s] -- Detecting C compiler ABI info - done
+[0.160s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.160s] -- Detecting C compile features
+[0.161s] -- Detecting C compile features - done
+[0.167s] -- Detecting CXX compiler ABI info
+[0.237s] -- Detecting CXX compiler ABI info - done
+[0.244s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.244s] -- Detecting CXX compile features
+[0.244s] -- Detecting CXX compile features - done
+[0.248s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.374s] -- Found Python3: /home/UMRobotics/.local/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.476s] -- Found xacro: 2.0.13 (/opt/ros/jazzy/share/xacro/cmake)
+[0.479s] -- Found controller_manager_msgs: 4.29.0 (/opt/ros/jazzy/share/controller_manager_msgs/cmake)
+[0.525s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.542s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.561s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.580s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.662s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.706s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.711s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.776s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.791s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.809s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.869s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.954s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.955s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.955s] -- Added test 'lint_cmake' to check CMake code style
+[0.956s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.958s] -- Added test 'xmllint' to check XML markup files
+[0.960s] -- Configuring done (0.9s)
+[0.962s] -- Generating done (0.0s)
+[0.964s] -- Build files have been written to: /home/UMRobotics/group12_ws/build/predefined_motion
+[0.970s] Invoked command in '/home/UMRobotics/group12_ws/build/predefined_motion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/UMRobotics/group12_ws/src/predefined_motion -DCMAKE_INSTALL_PREFIX=/home/UMRobotics/group12_ws/install/predefined_motion
+[0.971s] Invoking command in '/home/UMRobotics/group12_ws/build/predefined_motion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/UMRobotics/group12_ws/build/predefined_motion -- -j16 -l16
+[1.004s] Invoked command in '/home/UMRobotics/group12_ws/build/predefined_motion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/UMRobotics/group12_ws/build/predefined_motion -- -j16 -l16
+[1.011s] Invoking command in '/home/UMRobotics/group12_ws/build/predefined_motion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/UMRobotics/group12_ws/build/predefined_motion
+[1.016s] -- Install configuration: ""
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/ament_index/resource_index/package_run_dependencies/predefined_motion
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/ament_index/resource_index/parent_prefix_path/predefined_motion
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/environment/ament_prefix_path.sh
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/environment/ament_prefix_path.dsv
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/environment/path.sh
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/environment/path.dsv
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/local_setup.bash
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/local_setup.sh
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/local_setup.zsh
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/local_setup.dsv
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/package.dsv
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/ament_index/resource_index/packages/predefined_motion
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/cmake/predefined_motionConfig.cmake
+[1.017s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/cmake/predefined_motionConfig-version.cmake
+[1.018s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/package.xml
+[1.018s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/launch
+[1.018s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/launch/view_robot.launch.py
+[1.018s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/srdf
+[1.018s] -- Installing: /home/UMRobotics/group12_ws/install/predefined_motion/share/predefined_motion/srdf/ur.srdf.xacro
+[1.019s] Invoked command in '/home/UMRobotics/group12_ws/build/predefined_motion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/UMRobotics/group12_ws/build/predefined_motion
