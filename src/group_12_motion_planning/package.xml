@@ -12,7 +12,14 @@
   <depend>xacro</depend>
   <depend>rclcpp</depend>
   <depend>geometry_msgs</depend>
+  <depend>moveit_core</depend>
   <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_visual_tools</depend>
+  <depend>moveit_msgs</depend>
+  <depend>std_msgs</depend>
+  <!-- <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>moveit_ros_planning_interface</depend> -->
 
   <!-- Core dependencies -->
   <!-- <build_depend>rclcpp</build_depend>

@@ -24,20 +24,36 @@ add_executable(ur5e_moveit_controller
   src/ur5e_moveit_controller.cpp
 )
 
-# target_include_directories(ur5e_moveit_controller PRIVATE
-#   include
+# Add this after add_executable()
+include_directories(
+  ${moveit_core_INCLUDE_DIRS}
+  ${moveit_ros_planning_interface_INCLUDE_DIRS}
+)
+
+# # Combine all dependencies in a single target_link_libraries call
+target_link_libraries(ur5e_moveit_controller PRIVATE
+  rclcpp::rclcpp
+  # std_msgs::std_msgs
+  moveit_ros_planning_interface::move_group_interface
+  moveit_visual_tools::moveit_visual_tools
+  moveit_core::moveit_kinematics_base
+  moveit_core::moveit_common
+  moveit_core::moveit_collision_detection
+  moveit_msgs::moveit_msgs
+  # geometry_msgs::geometry_msgs
+)
+
+# Link against all required targets
+# Link against all required targets using correct names
+# target_link_libraries(ur5e_moveit_controller PRIVATE
+#   rclcpp::rclcpp
+#   geometry_msgs::geometry_msgs
+#   moveit_core::moveit_common
+#   moveit_ros_planning_interface::move_group_interface
+#   moveit_visual_tools::moveit_visual_tools
 # )
 
-ament_target_dependencies(ur5e_moveit_controller
-  rclcpp
-  std_msgs
-  geometry_msgs
-  moveit_ros_planning_interface
-  moveit_visual_tools
-  moveit_msgs
-  moveit_core
-#   controller_manager_msgs
-)
+
 
 install(TARGETS ur5e_moveit_controller
   DESTINATION lib/${PROJECT_NAME}
@@ -57,17 +73,3 @@ if(BUILD_TESTING)
 endif()
 
 ament_package()
-
-
-# ament_target_dependencies(ur5e_moveit_controller
-#   rclcpp
-#   moveit_ros_planning_interface
-#   controller_manager_msgs
-#   graph_msgs 
-#   moveit_visual_tools
-# )
-
-
-# install(TARGETS ur5e_moveit_controller
-#   DESTINATION lib/${PROJECT_NAME}
-# )
