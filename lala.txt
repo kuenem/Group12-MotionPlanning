@@ -1,0 +1,558 @@
+I have the following ROS2 launch file view_robot.launch.py:
+from launch import LaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.actions import IncludeLaunchDescription, OpaqueFunction, TimerAction
+from launch_ros.actions import Node
+from launch.substitutions import PathJoinSubstitution, Command, FindExecutable
+from launch_ros.substitutions import FindPackageShare
+from launch_ros.parameter_descriptions import ParameterFile
+
+# from launch.actions import DeclareLaunchArgument
+# from launch.substitutions import LaunchConfiguration
+import os
+import sys
+import launch
+import xacro
+
+def wait_for_user_input(context, *args, **kwargs):
+    print("\n=== Please start the External Control Program on the UR5e robot ===")
+    input("Press [Enter] to continue once it's started... ")
+    return []
+
+
+        # New ==========================================
+def get_robot_description():
+    joint_limit_params = PathJoinSubstitution(
+        [FindPackageShare("ur_description"), "config", "ur5e", "joint_limits.yaml"]
+    )
+    kinematics_params = PathJoinSubstitution(
+        [FindPackageShare("ur_description"), "config", "ur5e", "default_kinematics.yaml"]
+    )
+    physical_params = PathJoinSubstitution(
+        [FindPackageShare("ur_description"), "config", "ur5e", "physical_parameters.yaml"]
+    )
+    visual_params = PathJoinSubstitution(
+        [FindPackageShare("ur_description"), "config", "ur5e", "visual_parameters.yaml"]
+    )
+    robot_description_content = Command(
+        [
+            PathJoinSubstitution([FindExecutable(name="xacro")]),
+            " ",
+            PathJoinSubstitution([FindPackageShare("ur_description"), "urdf", "ur.urdf.xacro"]),
+            " ",
+            "robot_ip:=192.168.1.5",
+            " ",
+            "joint_limit_params:=",
+            joint_limit_params,
+            " ",
+            "kinematics_params:=",
+            kinematics_params,
+            " ",
+            "physical_params:=",
+            physical_params,
+            " ",
+            "visual_params:=",
+            visual_params,
+            " ",
+           "safety_limits:=",
+            "true",
+            " ",
+            "safety_pos_margin:=",
+            "0.15",
+            " ",
+            "safety_k_position:=",
+            "20",
+            " ",
+            "name:=",
+            "ur",
+            " ",
+            "ur_type:=",
+            "ur5e",
+            " ",
+            "prefix:=",
+            '""',
+            " ",
+        ]
+    )
+
+
+    robot_description = {"robot_description": robot_description_content}
+    return robot_description
+
+def get_robot_description_semantic():
+    # MoveIt Configuration
+    robot_description_semantic_content = Command(
+        [
+            PathJoinSubstitution([FindExecutable(name="xacro")]),
+            " ",
+            PathJoinSubstitution([
+                FindPackageShare("my_robot_cell_description"),
+                "srdf",
+                "ur.srdf.xacro"
+            ]),
+            " ",
+            "name:=ur"
+        ]
+    )
+    robot_description_semantic = {
+        "robot_description_semantic": robot_description_semantic_content
+    }
+    return robot_description_semantic
+        # New ==========================================
+
+
+def generate_launch_description():
+    # For launching connection with ur5e
+    ur_launch_file = os.path.join(
+        '/opt/ros/jazzy/share/ur_robot_driver/launch',
+        'ur_control.launch.py'
+    )
+
+    # New ==========================================
+
+    kinematics_config = PathJoinSubstitution([
+    FindPackageShare("my_robot_cell_description"),
+    "config",
+    "kinematics.yaml"
+    ])
+
+    # New ==========================================
+
+    moveit_launch = os.path.join(
+        '/opt/ros/jazzy/share/ur_moveit_config/launch',
+        'ur_moveit.launch.py'
+    )
+
+    IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(moveit_launch),
+        launch_arguments={
+            'ur_type': 'ur5e',
+            'launch_rviz': 'true'
+        }.items()
+    )
+
+    
+
+    # Path to the test goal publishers config
+    position_goals = PathJoinSubstitution(
+        #[FindPackageShare("ur_robot_driver"), "config", "test_goal_publishers_config.yaml"]
+        [FindPackageShare("ur_robot_driver"), "config", "our_funny_config.yaml"]
+    )
+    robot_description = get_robot_description()
+    robot_description_semantic = get_robot_description_semantic()
+   
+
+    return LaunchDescription([
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(ur_launch_file),
+            launch_arguments={
+                'ur_type': 'ur5e',
+                'robot_ip': '192.168.1.5',  # ← robot IP
+                # 'headless_mode': 'true'
+            }.items()
+        ),
+
+        # # Delay and wait for user input
+        # TimerAction(
+        #     period=5.0,  # Adjust delay if needed
+        #     actions=[
+        #         OpaqueFunction(function=wait_for_user_input)
+        #     ]
+        # ),
+
+        # MoveIt launch
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(moveit_launch),
+            launch_arguments={
+                'ur_type': 'ur5e',
+                'launch_rviz': 'false',
+                'kinematics_config': PathJoinSubstitution([
+                    FindPackageShare("my_robot_cell_description"),
+                    "config",
+                    "kinematics.yaml"
+                ])
+            }.items()
+        ),
+
+        # Node(
+        #     package='joint_state_publisher',
+        #     executable='joint_state_publisher',
+        #     name='joint_state_publisher'
+        # ),
+
+        # Node(
+        #     package='move_group',
+        #     executable='move_group',
+        #     output='screen',
+        #     parameters=[..., PathJoinSubstitution([
+        #         FindPackageShare("my_robot_cell_description"),
+        #         "config",
+        #         "kinematics.yaml"
+        #     ])]
+        # ),
+
+
+        # New ==========================================
+
+        # Node(
+        #     package='my_robot_cell_description',
+        #     executable='move_to_joint_goal',
+        #     name='move_to_joint_goal',
+        #     output='screen'
+        # ),
+
+        # New ==========================================
+
+        TimerAction(
+        period=8.0,  # Increase if needed
+        actions=[
+        Node(
+            package='group_12_motion_planning',
+            executable='ur5e_moveit_controller',
+            name='ur5e_moveit_controller',
+            output='screen',
+            parameters=[
+            robot_description,
+            robot_description_semantic,
+            ##############new
+            kinematics_config,
+            ####new
+        ],
+        ),
+        ]
+        ),
+
+       
+        # Test goal publisher
+        # Node(
+        #     package="ros2_controllers_test_nodes",
+        #     executable="publisher_joint_trajectory_controller",
+        #     name="publisher_scaled_joint_trajectory_controller",
+        #     parameters=[position_goals],
+        #     output="screen"
+        # )
+    ])
+    
+aiming to run this cpp node ur5e_moveit_controller.cpp:
+#include <memory>
+#include <rclcpp/rclcpp.hpp>
+#include <moveit/move_group_interface/move_group_interface.h>
+#include <geometry_msgs/msg/pose.hpp>
+
+int main(int argc, char *argv[])
+{
+    std::cout << "1============================================================================================1" << std::endl;
+
+  // Initialize ROS 2
+  rclcpp::init(argc, argv);
+  // RCLCPP_INFO(node->get_logger(), "Main start...");
+  // auto node = rclcpp::Node::make_shared("simple_moveit_motion");
+  auto const node = std::make_shared<rclcpp::Node>(
+    "ur5e_moveit_controller",
+    rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true)
+    // auto const node = rclcpp::Node::make_shared(
+    // "ur5e_moveit_controller",
+    // rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true)
+  );
+  
+
+    // Create a ROS logger
+    auto const logger = rclcpp::get_logger("ur5e_moveit_controller");
+    std::cout << "2============================================================================================2" << std::endl;
+
+    // Wait for MoveIt to initialize
+    if (!rclcpp::ok()) {
+        RCLCPP_ERROR(logger, "ROS shutdown while initializing");
+        return 1;
+    }
+
+    // Create the MoveIt MoveGroup Interface
+    // using moveit::planning_interface::MoveGroupInterface;
+    std::cout << "3============================================================================================3" << std::endl;
+    // auto move_group_interface = MoveGroupInterface(node, "ur_manipulator"); //change
+      // Initialize MoveGroupInterface with proper error handling
+    moveit::planning_interface::MoveGroupInterface move_group(node, "ur_manipulator");
+    if (!move_group.getRobotModel()) {
+      RCLCPP_ERROR(logger, "Failed to initialize MoveGroupInterface");
+      return 1;
+    }
+    std::cout << "4============================================================================================4" << std::endl;
+    rclcpp::sleep_for(std::chrono::seconds(10));
+    std::cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
+
+  // Configure planner parameters
+  move_group.setPlanningTime(10.0);
+  std::cout << "setPlanningTime++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
+  move_group.setNumPlanningAttempts(5);
+  std::cout << "setNumPlanningAttemps++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
+  move_group.setPlannerId("PTP");
+  std::cout << "setPlannerId++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << std::endl;
+
+
+    // Set a target Pose
+
+    geometry_msgs::msg::Pose target_pose;
+    target_pose.orientation.w = 1.0;
+    target_pose.position.x = 0.28;
+    target_pose.position.y = -0.2;
+    target_pose.position.z = 0.5;
+
+
+  // Verify target is reachable
+  if (!move_group.setPoseTarget(target_pose)) {
+    RCLCPP_ERROR(logger, "Invalid target pose");
+    return 1;
+  }
+
+  // Plan and execute
+  moveit::planning_interface::MoveGroupInterface::Plan plan;
+  if (move_group.plan(plan) == moveit::core::MoveItErrorCode::SUCCESS) {
+    RCLCPP_INFO(logger, "Planning successful, executing...");
+    move_group.execute(plan);
+  } else {
+    RCLCPP_ERROR(logger, "Planning failed");
+    return 1;
+  }
+
+  rclcpp::shutdown();
+  return 0;
+}
+
+
+with the following underlying structure:
+~/group12_ws/src$ tree
+.
+├── build
+│   ├── COLCON_IGNORE
+│   └── move_ur5e
+│       ├── colcon_build.rc
+│       ├── colcon_command_prefix_setup_py.sh
+│       ├── colcon_command_prefix_setup_py.sh.env
+│       ├── launch
+│       │   └── ur5e_moveit.launch.py -> /home/UMRobotics/group12_ws/src/move_ur5e/launch/ur5e_moveit.launch.py
+│       ├── package.xml -> /home/UMRobotics/group12_ws/src/move_ur5e/package.xml
+│       ├── prefix_override
+│       │   ├── __pycache__
+│       │   │   └── sitecustomize.cpython-312.pyc
+│       │   └── sitecustomize.py
+│       ├── resource
+│       │   └── move_ur5e -> /home/UMRobotics/group12_ws/src/move_ur5e/resource/move_ur5e
+│       ├── setup.cfg -> /home/UMRobotics/group12_ws/src/move_ur5e/setup.cfg
+│       ├── setup.py -> /home/UMRobotics/group12_ws/src/move_ur5e/setup.py
+│       └── src
+│           ├── move_ur5e -> /home/UMRobotics/group12_ws/src/move_ur5e/src/move_ur5e
+│           ├── move_ur5e.egg-info
+│           │   ├── dependency_links.txt
+│           │   ├── entry_points.txt
+│           │   ├── PKG-INFO
+│           │   ├── requires.txt
+│           │   ├── SOURCES.txt
+│           │   ├── top_level.txt
+│           │   └── zip-safe
+│           └── share
+│               └── move_ur5e
+│                   └── hook
+│                       ├── pythonpath_develop.dsv
+│                       ├── pythonpath_develop.ps1
+│                       └── pythonpath_develop.sh
+├── group_12_motion_planning
+│   ├── CMakeLists.txt
+│   ├── include
+│   │   └── group_12_motion_planning
+│   ├── package.xml
+│   └── src
+│       ├── quaternion_utils.cpp
+│       ├── quaternion_utils.h
+│       └── ur5e_moveit_controller.cpp
+├── hello_moveit_ur
+│   ├── CMakeLists.txt
+│   ├── config
+│   │   └── kinematics.yaml
+│   ├── include
+│   │   └── hello_moveit_ur
+│   ├── launch
+│   │   └── hello_moveit_ur_launch.py
+│   ├── package.xml
+│   └── src
+│       └── hello_moveit_ur.cpp
+├── install
+│   ├── COLCON_IGNORE
+│   ├── local_setup.bash
+│   ├── local_setup.ps1
+│   ├── local_setup.sh
+│   ├── _local_setup_util_ps1.py
+│   ├── _local_setup_util_sh.py
+│   ├── local_setup.zsh
+│   ├── move_ur5e
+│   │   ├── lib
+│   │   │   ├── move_ur5e
+│   │   │   │   └── move_to_joint_goal
+│   │   │   └── python3.12
+│   │   │       └── site-packages
+│   │   │           └── move-ur5e.egg-link
+│   │   └── share
+│   │       ├── ament_index
+│   │       │   └── resource_index
+│   │       │       └── packages
+│   │       │           └── move_ur5e -> /home/UMRobotics/group12_ws/src/build/move_ur5e/resource/move_ur5e
+│   │       ├── colcon-core
+│   │       │   └── packages
+│   │       │       └── move_ur5e
+│   │       └── move_ur5e
+│   │           ├── hook
+│   │           │   ├── ament_prefix_path.dsv
+│   │           │   ├── ament_prefix_path.ps1
+│   │           │   ├── ament_prefix_path.sh
+│   │           │   ├── pythonpath.dsv
+│   │           │   ├── pythonpath.ps1
+│   │           │   └── pythonpath.sh
+│   │           ├── launch
+│   │           │   └── ur5e_moveit.launch.py -> /home/UMRobotics/group12_ws/src/build/move_ur5e/launch/ur5e_moveit.launch.py
+│   │           ├── package.bash
+│   │           ├── package.dsv
+│   │           ├── package.ps1
+│   │           ├── package.sh
+│   │           ├── package.xml -> /home/UMRobotics/group12_ws/src/build/move_ur5e/package.xml
+│   │           └── package.zsh
+│   ├── setup.bash
+│   ├── setup.ps1
+│   ├── setup.sh
+│   └── setup.zsh
+├── log
+│   ├── build_2025-05-27_11-38-59
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── move_ur5e
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── build_2025-05-27_11-44-53
+│   │   ├── events.log
+│   │   ├── logger_all.log
+│   │   └── move_ur5e
+│   │       ├── command.log
+│   │       ├── stderr.log
+│   │       ├── stdout.log
+│   │       ├── stdout_stderr.log
+│   │       └── streams.log
+│   ├── COLCON_IGNORE
+│   ├── latest -> latest_build
+│   └── latest_build -> build_2025-05-27_11-44-53
+├── move_ur5e
+│   ├── launch
+│   │   └── ur5e_moveit.launch.py
+│   ├── package.xml
+│   ├── resource
+│   │   └── move_ur5e
+│   ├── setup.cfg
+│   ├── setup.py
+│   ├── src
+│   │   └── move_ur5e
+│   │       ├── __init__.py
+│   │       ├── move_to_joint_goal.py
+│   │       └── __pycache__
+│   │           ├── __init__.cpython-312.pyc
+│   │           └── move_to_joint_goal.cpython-312.pyc
+│   └── test
+│       ├── test_copyright.py
+│       ├── test_flake8.py
+│       └── test_pep257.py
+├── my_robot_cell_description
+│   ├── CMakeLists.txt
+│   ├── config
+│   │   ├── calibration
+│   │   └── kinematics.yaml
+│   ├── include
+│   │   └── my_robot_cell_description
+│   ├── launch
+│   │   └── view_robot.launch.py
+│   ├── meshes
+│   │   └── ur5e
+│   │       ├── collision
+│   │       │   ├── base.stl
+│   │       │   ├── forearm.stl
+│   │       │   ├── shoulder.stl
+│   │       │   ├── upperarm.stl
+│   │       │   ├── wrist1.stl
+│   │       │   ├── wrist2.stl
+│   │       │   └── wrist3.stl
+│   │       └── visual
+│   │           ├── base.dae
+│   │           ├── forearm.dae
+│   │           ├── shoulder.dae
+│   │           ├── upperarm.dae
+│   │           ├── wrist1.dae
+│   │           ├── wrist2.dae
+│   │           └── wrist3.dae
+│   ├── package.xml
+│   ├── setup.py
+│   ├── src
+│   │   └── my_robot_cell_description
+│   │       ├── __init__.py
+│   │       └── move_to_joint_goal.py
+│   ├── srdf
+│   │   └── ur.srdf.xacro
+│   └── urdf
+│       ├── inc
+│       │   ├── ur_common.xacro
+│       │   ├── ur_joint_control.xacro
+│       │   ├── ur_sensors.xacro
+│       │   └── ur_transmissions.xacro
+│       ├── ros2_control_mock_hardware.xacro
+│       ├── ur_macro.xacro
+│       ├── ur_mocked.urdf.xacro
+│       └── ur.urdf.xacro
+├── predefined_motion
+│   ├── CMakeLists.txt
+│   ├── include
+│   │   └── predefined_motion
+│   ├── launch
+│   │   └── view_robot.launch.py
+│   ├── meshes
+│   │   └── ur5e
+│   │       ├── collision
+│   │       │   ├── base.stl
+│   │       │   ├── forearm.stl
+│   │       │   ├── shoulder.stl
+│   │       │   ├── upperarm.stl
+│   │       │   ├── wrist1.stl
+│   │       │   ├── wrist2.stl
+│   │       │   └── wrist3.stl
+│   │       └── visual
+│   │           ├── base.dae
+│   │           ├── forearm.dae
+│   │           ├── shoulder.dae
+│   │           ├── upperarm.dae
+│   │           ├── wrist1.dae
+│   │           ├── wrist2.dae
+│   │           └── wrist3.dae
+│   ├── package.xml
+│   ├── src
+│   ├── srdf
+│   │   └── ur.srdf.xacro
+│   └── urdf
+│       ├── inc
+│       │   ├── ur_common.xacro
+│       │   ├── ur_joint_control.xacro
+│       │   ├── ur_sensors.xacro
+│       │   └── ur_transmissions.xacro
+│       ├── ros2_control_mock_hardware.xacro
+│       ├── ur_macro.xacro
+│       ├── ur_mocked.urdf.xacro
+│       └── ur.urdf.xacro
+└── test
+    ├── coords10.txt
+    ├── coords1.txt
+    ├── coords2.txt
+    ├── coords3.txt
+    ├── coords4.txt
+    ├── coords5.txt
+    ├── coords6.txt
+    ├── coords7.txt
+    ├── coords8.txt
+    ├── coords9.txt
+    ├── save_tf_and_joint_states.py
+    └── test.py
+

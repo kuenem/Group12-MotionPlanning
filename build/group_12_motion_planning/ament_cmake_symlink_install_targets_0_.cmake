@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/UMRobotics/group12_ws/build/group_12_motion_planning/ur5e_moveit_controller" "TARGETS" "ur5e_moveit_controller" "DESTINATION" "lib/group_12_motion_planning")

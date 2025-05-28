@@ -1,0 +1,77 @@
+[0.026s] Invoking command in '/home/UMRobotics/group12_ws/src/build/ur_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/UMRobotics/group12_ws/src/Universal_Robots_ROS2_Driver/ur_moveit_config -DCMAKE_INSTALL_PREFIX=/home/UMRobotics/group12_ws/src/install/ur_moveit_config
+[0.070s] -- The C compiler identification is GNU 13.3.0
+[0.112s] -- The CXX compiler identification is GNU 13.3.0
+[0.125s] -- Detecting C compiler ABI info
+[0.202s] -- Detecting C compiler ABI info - done
+[0.209s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.209s] -- Detecting C compile features
+[0.209s] -- Detecting C compile features - done
+[0.216s] -- Detecting CXX compiler ABI info
+[0.301s] -- Detecting CXX compiler ABI info - done
+[0.307s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.308s] -- Detecting CXX compile features
+[0.308s] -- Detecting CXX compile features - done
+[0.313s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.473s] -- Found Python3: /home/UMRobotics/.local/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.761s] -- Configuring done (0.7s)
+[0.763s] -- Generating done (0.0s)
+[0.764s] -- Build files have been written to: /home/UMRobotics/group12_ws/src/build/ur_moveit_config
+[0.768s] Invoked command in '/home/UMRobotics/group12_ws/src/build/ur_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/UMRobotics/group12_ws/src/Universal_Robots_ROS2_Driver/ur_moveit_config -DCMAKE_INSTALL_PREFIX=/home/UMRobotics/group12_ws/src/install/ur_moveit_config
+[0.769s] Invoking command in '/home/UMRobotics/group12_ws/src/build/ur_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/UMRobotics/group12_ws/src/build/ur_moveit_config -- -j16 -l16
+[0.820s] Built target ament_cmake_python_copy_ur_moveit_config
+[1.027s] running egg_info
+[1.028s] creating ur_moveit_config.egg-info
+[1.050s] writing ur_moveit_config.egg-info/PKG-INFO
+[1.050s] writing dependency_links to ur_moveit_config.egg-info/dependency_links.txt
+[1.050s] writing top-level names to ur_moveit_config.egg-info/top_level.txt
+[1.050s] writing manifest file 'ur_moveit_config.egg-info/SOURCES.txt'
+[1.120s] reading manifest file 'ur_moveit_config.egg-info/SOURCES.txt'
+[1.120s] writing manifest file 'ur_moveit_config.egg-info/SOURCES.txt'
+[1.145s] Built target ament_cmake_python_build_ur_moveit_config_egg
+[1.155s] Invoked command in '/home/UMRobotics/group12_ws/src/build/ur_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/UMRobotics/group12_ws/src/build/ur_moveit_config -- -j16 -l16
+[1.165s] Invoking command in '/home/UMRobotics/group12_ws/src/build/ur_moveit_config': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/UMRobotics/group12_ws/src/build/ur_moveit_config
+[1.173s] -- Install configuration: ""
+[1.173s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/config
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/config/joint_limits.yaml
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/config/kinematics.yaml
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/config/controllers.yaml
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/config/ompl_planning.yaml
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/config/ur_servo.yaml
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/launch
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/launch/ur_moveit.launch.py
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/rviz
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/rviz/view_robot.rviz
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/srdf
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/srdf/ur_macro.srdf.xacro
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/srdf/ur.srdf.xacro
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/environment/pythonpath.sh
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/environment/pythonpath.dsv
+[1.174s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config-2.8.0-py3.12.egg-info
+[1.175s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config-2.8.0-py3.12.egg-info/PKG-INFO
+[1.175s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config-2.8.0-py3.12.egg-info/SOURCES.txt
+[1.175s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config-2.8.0-py3.12.egg-info/dependency_links.txt
+[1.175s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config-2.8.0-py3.12.egg-info/top_level.txt
+[1.175s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config
+[1.175s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config/__init__.py
+[1.175s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config/launch_common.py
+[1.204s] Listing '/home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config'...
+[1.204s] Compiling '/home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config/__init__.py'...
+[1.204s] Compiling '/home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/ur_moveit_config/launch_common.py'...
+[1.208s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/launch_common.py
+[1.238s] Compiling '/home/UMRobotics/group12_ws/src/install/ur_moveit_config/lib/python3.12/site-packages/launch_common.py'...
+[1.241s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ament_index/resource_index/package_run_dependencies/ur_moveit_config
+[1.241s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ament_index/resource_index/parent_prefix_path/ur_moveit_config
+[1.241s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/environment/ament_prefix_path.sh
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/environment/ament_prefix_path.dsv
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/environment/path.sh
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/environment/path.dsv
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/local_setup.bash
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/local_setup.sh
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/local_setup.zsh
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/local_setup.dsv
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/package.dsv
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ament_index/resource_index/packages/ur_moveit_config
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/cmake/ur_moveit_configConfig.cmake
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/cmake/ur_moveit_configConfig-version.cmake
+[1.242s] -- Installing: /home/UMRobotics/group12_ws/src/install/ur_moveit_config/share/ur_moveit_config/package.xml
+[1.244s] Invoked command in '/home/UMRobotics/group12_ws/src/build/ur_moveit_config' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/UMRobotics/moveit_ws/install/moveit_configs_utils:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/UMRobotics/group12_ws/src/build/ur_moveit_config

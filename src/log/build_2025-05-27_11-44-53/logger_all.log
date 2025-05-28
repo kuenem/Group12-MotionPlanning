@@ -1,0 +1,184 @@
+[0.081s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'move_ur5e']
+[0.081s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['move_ur5e'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7eff6c5f4ad0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7eff6c56bc50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7eff6c56bc50>>, mixin_verb=('build',))
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.105s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/UMRobotics/group12_ws/src'
+[0.105s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.105s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.105s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.105s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.105s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.105s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.105s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.105s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.105s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(group_12_motion_planning) by extensions ['ignore', 'ignore_ament_install']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(group_12_motion_planning) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(group_12_motion_planning) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(group_12_motion_planning) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(group_12_motion_planning) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(group_12_motion_planning) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(group_12_motion_planning) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(group_12_motion_planning) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(group_12_motion_planning) by extension 'ros'
+[0.122s] DEBUG:colcon.colcon_core.package_identification:Package 'group_12_motion_planning' with type 'ros.ament_cmake' and name 'group_12_motion_planning'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(hello_moveit_ur) by extensions ['ignore', 'ignore_ament_install']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(hello_moveit_ur) by extension 'ignore'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(hello_moveit_ur) by extension 'ignore_ament_install'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(hello_moveit_ur) by extensions ['colcon_pkg']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(hello_moveit_ur) by extension 'colcon_pkg'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(hello_moveit_ur) by extensions ['colcon_meta']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(hello_moveit_ur) by extension 'colcon_meta'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(hello_moveit_ur) by extensions ['ros']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(hello_moveit_ur) by extension 'ros'
+[0.123s] DEBUG:colcon.colcon_core.package_identification:Package 'hello_moveit_ur' with type 'ros.ament_cmake' and name 'hello_moveit_ur'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(move_ur5e) by extensions ['ignore', 'ignore_ament_install']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(move_ur5e) by extension 'ignore'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(move_ur5e) by extension 'ignore_ament_install'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(move_ur5e) by extensions ['colcon_pkg']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(move_ur5e) by extension 'colcon_pkg'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(move_ur5e) by extensions ['colcon_meta']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(move_ur5e) by extension 'colcon_meta'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(move_ur5e) by extensions ['ros']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(move_ur5e) by extension 'ros'
+[0.124s] DEBUG:colcon.colcon_core.package_identification:Package 'move_ur5e' with type 'ros.ament_python' and name 'move_ur5e'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_cell_description) by extensions ['ignore', 'ignore_ament_install']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_cell_description) by extension 'ignore'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_cell_description) by extension 'ignore_ament_install'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_cell_description) by extensions ['colcon_pkg']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_cell_description) by extension 'colcon_pkg'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_cell_description) by extensions ['colcon_meta']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_cell_description) by extension 'colcon_meta'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_cell_description) by extensions ['ros']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(my_robot_cell_description) by extension 'ros'
+[0.124s] DEBUG:colcon.colcon_core.package_identification:Package 'my_robot_cell_description' with type 'ros.ament_cmake' and name 'my_robot_cell_description'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(predefined_motion) by extensions ['ignore', 'ignore_ament_install']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(predefined_motion) by extension 'ignore'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(predefined_motion) by extension 'ignore_ament_install'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(predefined_motion) by extensions ['colcon_pkg']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(predefined_motion) by extension 'colcon_pkg'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(predefined_motion) by extensions ['colcon_meta']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(predefined_motion) by extension 'colcon_meta'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(predefined_motion) by extensions ['ros']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(predefined_motion) by extension 'ros'
+[0.125s] DEBUG:colcon.colcon_core.package_identification:Package 'predefined_motion' with type 'ros.ament_cmake' and name 'predefined_motion'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['ignore', 'ignore_ament_install']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'ignore'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'ignore_ament_install'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['colcon_pkg']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'colcon_pkg'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['colcon_meta']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'colcon_meta'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['ros']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'ros'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['cmake', 'python']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'cmake'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'python'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['python_setup_py']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'python_setup_py'
+[0.125s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.125s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.125s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.125s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.125s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.137s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'group_12_motion_planning' in 'group_12_motion_planning'
+[0.137s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'hello_moveit_ur' in 'hello_moveit_ur'
+[0.137s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'my_robot_cell_description' in 'my_robot_cell_description'
+[0.137s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predefined_motion' in 'predefined_motion'
+[0.137s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.137s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.138s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/UMRobotics/group12_ws/src/install/predefined_motion' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.138s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/UMRobotics/group12_ws/src/install/my_robot_cell_description' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.138s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/UMRobotics/group12_ws/src/install/hello_moveit_ur' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.138s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/UMRobotics/group12_ws/src/install/group_12_motion_planning' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.139s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/UMRobotics/group12_ws/src/install/predefined_motion' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.139s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/UMRobotics/group12_ws/src/install/my_robot_cell_description' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.139s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/UMRobotics/group12_ws/src/install/hello_moveit_ur' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.139s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/UMRobotics/group12_ws/src/install/group_12_motion_planning' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.140s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/UMRobotics/group12_ws/src/install
+[0.141s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 71 installed packages in /home/UMRobotics/moveit_ws/install
+[0.142s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 464 installed packages in /opt/ros/jazzy
+[0.144s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'move_ur5e' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'move_ur5e' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'move_ur5e' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'move_ur5e' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'move_ur5e' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'move_ur5e' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'move_ur5e' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'move_ur5e' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'move_ur5e' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'move_ur5e' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/UMRobotics/group12_ws/src/build/move_ur5e', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/UMRobotics/group12_ws/src/install/move_ur5e', 'merge_install': False, 'path': '/home/UMRobotics/group12_ws/src/move_ur5e', 'symlink_install': True, 'test_result_base': None}
+[0.193s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.194s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.194s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/UMRobotics/group12_ws/src/move_ur5e' with build type 'ament_python'
+[0.194s] Level 1:colcon.colcon_core.shell:create_environment_hook('move_ur5e', 'ament_prefix_path')
+[0.195s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/hook/ament_prefix_path.ps1'
+[0.196s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/hook/ament_prefix_path.dsv'
+[0.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/hook/ament_prefix_path.sh'
+[0.197s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.197s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.374s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/UMRobotics/group12_ws/src/move_ur5e'
+[0.374s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.374s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.886s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/UMRobotics/group12_ws/src/build/move_ur5e': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/UMRobotics/group12_ws/src/build/move_ur5e/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/UMRobotics/group12_ws/src/install/move_ur5e/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/UMRobotics/group12_ws/src/build/move_ur5e/build --no-deps symlink_data
+[1.482s] Level 1:colcon.colcon_core.shell:create_environment_hook('move_ur5e', 'pythonpath_develop')
+[1.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/UMRobotics/group12_ws/src/build/move_ur5e/src/share/move_ur5e/hook/pythonpath_develop.ps1'
+[1.483s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/UMRobotics/group12_ws/src/build/move_ur5e' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/UMRobotics/group12_ws/src/build/move_ur5e/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/UMRobotics/group12_ws/src/install/move_ur5e/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/UMRobotics/group12_ws/src/build/move_ur5e/build --no-deps symlink_data
+[1.483s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/UMRobotics/group12_ws/src/build/move_ur5e/src/share/move_ur5e/hook/pythonpath_develop.dsv'
+[1.483s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/UMRobotics/group12_ws/src/build/move_ur5e/src/share/move_ur5e/hook/pythonpath_develop.sh'
+[1.485s] Level 1:colcon.colcon_core.environment:checking '/home/UMRobotics/group12_ws/src/install/move_ur5e' for CMake module files
+[1.485s] Level 1:colcon.colcon_core.environment:checking '/home/UMRobotics/group12_ws/src/install/move_ur5e' for CMake config files
+[1.485s] Level 1:colcon.colcon_core.environment:checking '/home/UMRobotics/group12_ws/src/install/move_ur5e/lib'
+[1.486s] Level 1:colcon.colcon_core.environment:checking '/home/UMRobotics/group12_ws/src/install/move_ur5e/bin'
+[1.486s] Level 1:colcon.colcon_core.environment:checking '/home/UMRobotics/group12_ws/src/install/move_ur5e/lib/pkgconfig/move_ur5e.pc'
+[1.486s] Level 1:colcon.colcon_core.environment:checking '/home/UMRobotics/group12_ws/src/install/move_ur5e/lib/python3.12/site-packages'
+[1.486s] Level 1:colcon.colcon_core.shell:create_environment_hook('move_ur5e', 'pythonpath')
+[1.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/hook/pythonpath.ps1'
+[1.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/hook/pythonpath.dsv'
+[1.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/hook/pythonpath.sh'
+[1.487s] Level 1:colcon.colcon_core.environment:checking '/home/UMRobotics/group12_ws/src/install/move_ur5e/bin'
+[1.487s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(move_ur5e)
+[1.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/package.ps1'
+[1.487s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/package.dsv'
+[1.488s] INFO:colcon.colcon_core.shell:Creating package script '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/package.sh'
+[1.488s] INFO:colcon.colcon_core.shell:Creating package script '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/package.bash'
+[1.488s] INFO:colcon.colcon_core.shell:Creating package script '/home/UMRobotics/group12_ws/src/install/move_ur5e/share/move_ur5e/package.zsh'
+[1.489s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/UMRobotics/group12_ws/src/install/move_ur5e/share/colcon-core/packages/move_ur5e)
+[1.489s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.489s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.489s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.489s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.493s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.493s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.493s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.502s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.502s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/UMRobotics/group12_ws/src/install/local_setup.ps1'
+[1.503s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/UMRobotics/group12_ws/src/install/_local_setup_util_ps1.py'
+[1.503s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/UMRobotics/group12_ws/src/install/setup.ps1'
+[1.505s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/UMRobotics/group12_ws/src/install/local_setup.sh'
+[1.506s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/UMRobotics/group12_ws/src/install/_local_setup_util_sh.py'
+[1.506s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/UMRobotics/group12_ws/src/install/setup.sh'
+[1.508s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/UMRobotics/group12_ws/src/install/local_setup.bash'
+[1.508s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/UMRobotics/group12_ws/src/install/setup.bash'
+[1.510s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/UMRobotics/group12_ws/src/install/local_setup.zsh'
+[1.510s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/UMRobotics/group12_ws/src/install/setup.zsh'

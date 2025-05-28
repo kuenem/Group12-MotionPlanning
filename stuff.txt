@@ -1,0 +1,7 @@
+To run our VERY fancy own package use the following commands:
+
+1: cd group12_ws/
+2: colcon build 
+3: source install/setup.bash
+4: ros2 launch my_robot_cell_description view_robot.launch.py
+

@@ -1,0 +1,5 @@
+source;share/group_12_motion_planning/local_setup.bash
+source;share/group_12_motion_planning/local_setup.dsv
+source;share/group_12_motion_planning/local_setup.ps1
+source;share/group_12_motion_planning/local_setup.sh
+source;share/group_12_motion_planning/local_setup.zsh
