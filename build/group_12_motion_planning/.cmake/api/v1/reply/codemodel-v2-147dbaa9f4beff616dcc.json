@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-85d81a1ef4e8cd2af86b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "group_12_motion_planning",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "group_12_motion_planning_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-group_12_motion_planning_uninstall-8b12709acf37359c67bb.json",
+					"name" : "group_12_motion_planning_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f44e208f3454625ea214.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ur5e_moveit_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ur5e_moveit_controller-79e13229cb6503c05855.json",
+					"name" : "ur5e_moveit_controller",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/UMRobotics/group12_ws/build/group_12_motion_planning",
+		"source" : "/home/UMRobotics/group12_ws/src/group_12_motion_planning"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

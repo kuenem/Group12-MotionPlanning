@@ -1,2 +1,0 @@
-Invoking command in '/home/UMRobotics/group12_ws/build/group_12_motion_planning': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/UMRobotics/group12_ws/build/group_12_motion_planning -- -j16 -l16
-Invoked command in '/home/UMRobotics/group12_ws/build/group_12_motion_planning' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/UMRobotics/group12_ws/build/group_12_motion_planning -- -j16 -l16

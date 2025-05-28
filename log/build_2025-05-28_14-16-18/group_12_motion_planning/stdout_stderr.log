@@ -1,9 +1,0 @@
-[ 50%] [32mBuilding CXX object CMakeFiles/ur5e_moveit_controller.dir/src/ur5e_moveit_controller.cpp.o[0m
-In file included from [01m[K/home/UMRobotics/group12_ws/src/group_12_motion_planning/src/ur5e_moveit_controller.cpp:3[m[K:
-[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:40:10:[m[K [01;31m[Kfatal error: [m[Kmoveit/macros/class_forward.hpp: No such file or directory
-   40 | #include [01;31m[K<moveit/macros/class_forward.hpp>[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/ur5e_moveit_controller.dir/build.make:76: CMakeFiles/ur5e_moveit_controller.dir/src/ur5e_moveit_controller.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/ur5e_moveit_controller.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

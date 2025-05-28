@@ -1,9 +1,0 @@
-/home/UMRobotics/group12_ws/build/predefined_motion/CMakeFiles/uninstall.dir
-/home/UMRobotics/group12_ws/build/predefined_motion/CMakeFiles/predefined_motion_uninstall.dir
-/home/UMRobotics/group12_ws/build/predefined_motion/CMakeFiles/test.dir
-/home/UMRobotics/group12_ws/build/predefined_motion/CMakeFiles/edit_cache.dir
-/home/UMRobotics/group12_ws/build/predefined_motion/CMakeFiles/rebuild_cache.dir
-/home/UMRobotics/group12_ws/build/predefined_motion/CMakeFiles/list_install_components.dir
-/home/UMRobotics/group12_ws/build/predefined_motion/CMakeFiles/install.dir
-/home/UMRobotics/group12_ws/build/predefined_motion/CMakeFiles/install/local.dir
-/home/UMRobotics/group12_ws/build/predefined_motion/CMakeFiles/install/strip.dir

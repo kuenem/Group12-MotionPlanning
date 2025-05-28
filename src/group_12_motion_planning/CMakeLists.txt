@@ -6,23 +6,19 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 find_package(ament_cmake REQUIRED)
-find_package(xacro REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(moveit_core REQUIRED)
-# find_package(moveit_core REQUIRED)
-# # find_package(controller_manager_msgs REQUIRED)
-# # find_package(graph_msgs REQUIRED)
-# find_package(moveit_visual_tools REQUIRED)
-# find_package(std_msgs REQUIRED)
-# find_package(geometry_msgs REQUIRED)
-# find_package(moveit_msgs REQUIRED)
-# # find_package(quaternion_utils REQUIRED)
 
-# Include directories
+# Get include directories
+message(STATUS "moveit_ros_planning_interface_INCLUDE_DIRS: ${moveit_ros_planning_interface_INCLUDE_DIRS}")
+message(STATUS "moveit_core_INCLUDE_DIRS: ${moveit_core_INCLUDE_DIRS}")
+
+# Add include directories
 include_directories(
-  include
+  /opt/ros/jazzy/include
   ${moveit_ros_planning_interface_INCLUDE_DIRS}
+  ${moveit_core_INCLUDE_DIRS}
 )
 
 add_executable(ur5e_moveit_controller src/ur5e_moveit_controller.cpp)
@@ -30,7 +26,7 @@ add_executable(ur5e_moveit_controller src/ur5e_moveit_controller.cpp)
 # Link libraries
 target_link_libraries(ur5e_moveit_controller
   ${moveit_ros_planning_interface_LIBRARIES}
-  ${rclcpp_LIBRARIES}
+  rclcpp::rclcpp
 )
 
 install(TARGETS ur5e_moveit_controller

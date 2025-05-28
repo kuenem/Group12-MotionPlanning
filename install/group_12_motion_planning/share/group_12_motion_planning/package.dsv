@@ -1,6 +1,3 @@
-source;share/group_12_motion_planning/hook/cmake_prefix_path.ps1
-source;share/group_12_motion_planning/hook/cmake_prefix_path.dsv
-source;share/group_12_motion_planning/hook/cmake_prefix_path.sh
 source;share/group_12_motion_planning/local_setup.bash
 source;share/group_12_motion_planning/local_setup.dsv
 source;share/group_12_motion_planning/local_setup.ps1
