@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000212] (-) JobUnselected: {'identifier': 'group_12_motion_planning'}
+[0.000232] (-) JobUnselected: {'identifier': 'hello_moveit'}
+[0.000242] (-) JobUnselected: {'identifier': 'my_robot_cell_description'}
+[0.000250] (-) JobUnselected: {'identifier': 'predefined_motion'}
+[0.000257] (-) JobUnselected: {'identifier': 'ur5e_control'}
+[0.000265] (-) EventReactorShutdown: {}

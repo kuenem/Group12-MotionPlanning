@@ -1,38 +1,28 @@
 cmake_minimum_required(VERSION 3.8)
-project(group_12_motion_planning)
+project(hello_moveit)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+# find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(moveit_core REQUIRED)
 
-# Get include directories
-message(STATUS "moveit_ros_planning_interface_INCLUDE_DIRS: ${moveit_ros_planning_interface_INCLUDE_DIRS}")
-message(STATUS "moveit_core_INCLUDE_DIRS: ${moveit_core_INCLUDE_DIRS}")
-
-# Add include directories
-include_directories(
-  /opt/ros/jazzy/include
-  ${moveit_ros_planning_interface_INCLUDE_DIRS}
-  ${moveit_core_INCLUDE_DIRS}
+add_executable(hello_moveit src/hello_moveit.cpp)
+target_include_directories(hello_moveit PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
+target_compile_features(hello_moveit PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+ament_target_dependencies(
+  hello_moveit
+  "moveit_ros_planning_interface"
+  "rclcpp"
 )
 
-add_executable(ur5e_moveit_controller src/ur5e_moveit_controller.cpp)
-
-# Link libraries
-target_link_libraries(ur5e_moveit_controller
-  ${moveit_ros_planning_interface_LIBRARIES}
-  ${moveit_core_LIBRARIES}
-  rclcpp::rclcpp
-)
-
-install(TARGETS ur5e_moveit_controller
-  DESTINATION lib/${PROJECT_NAME}
-)
+install(TARGETS hello_moveit
+  DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
